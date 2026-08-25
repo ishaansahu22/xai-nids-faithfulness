@@ -1,0 +1,35 @@
+{
+  "model": "model_A_smote",
+  "method": "SMOTE-balanced",
+  "seed": 42,
+  "accuracy": 0.9199,
+  "precision": 0.8178,
+  "recall": 0.7364,
+  "f1_score": 0.775,
+  "inference_ms_per_sample": 0.002,
+  "confusion_matrix": [
+    [
+      147485,
+      5798
+    ],
+    [
+      9311,
+      26016
+    ]
+  ],
+  "xgboost_params": {
+    "n_estimators": 200,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5,
+    "gamma": 0.1,
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "use_label_encoder": false,
+    "random_state": 42,
+    "n_jobs": -1,
+    "tree_method": "hist"
+  }
+}
