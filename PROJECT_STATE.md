@@ -34,8 +34,8 @@
   - [ ] 3.4 5-Seed statistical validation (deferred to after Phase 4)
 
 - [/] **Phase 4: XAI Faithfulness & Uncertainty Quantification** ⏳
-  - [ ] 4.1 `src/evaluate_shap.py` — TreeSHAP with k-means background (1000 samples, <50ms)
-  - [ ] 4.2 Deletion/Insertion AUC curves (500 test attack samples, Model A vs Model B)
+  - [x] 4.1 `src/evaluate_shap.py` — TreeSHAP with k-means background (1000 samples, <50ms)
+  - [x] 4.2 Deletion/Insertion AUC curves (500 test attack samples, Model A vs Model B)
   - [ ] 4.3 Multi-seed SHAP stability (Jaccard similarity of Top-5 features)
   - [ ] 4.4 `src/uncertainty.py` — MAPIE Conformal Prediction (α=0.05, 95% coverage)
 
