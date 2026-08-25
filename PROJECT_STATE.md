@@ -39,9 +39,9 @@
   - [ ] 4.3 Multi-seed SHAP stability (Jaccard similarity of Top-5 features)
   - [x] 4.4 `src/uncertainty.py` — MAPIE Conformal Prediction (α=0.05, 95% coverage)
 
-- [ ] **Phase 5: Fast Triage REST API & Presentation**
-  - [ ] 5.1 `api/main.py` — FastAPI `/predict` endpoint
-  - [ ] 5.2 Response: predicted class + MAPIE confidence set + Top-3 SHAP attributions (<100ms)
+- [x] **Phase 5: Fast Triage REST API & Presentation**
+  - [x] 5.1 `api/main.py` — FastAPI `/predict` endpoint
+  - [x] 5.2 Response: predicted class + MAPIE confidence set + Top-3 SHAP attributions (<100ms)
 
 ## 4. Hyperparameter & Artifact Registry
 | Parameter               | Value                                      |
