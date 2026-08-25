@@ -1,0 +1,24 @@
+{
+  "alpha": 0.05,
+  "target_coverage": 0.95,
+  "empirical_coverage": 0.947251,
+  "coverage_meets_target": false,
+  "total_samples": 188610,
+  "triage_distribution": {
+    "confident_benign": 137614,
+    "confident_benign_pct": 72.96,
+    "confident_attack": 30805,
+    "confident_attack_pct": 16.33,
+    "uncertain_review": 20191,
+    "uncertain_review_pct": 10.71,
+    "empty_set": 0,
+    "empty_set_pct": 0.0
+  },
+  "point_prediction": {
+    "accuracy": 0.8964,
+    "f1_score": 0.7426
+  },
+  "phase": "Phase 4, Step 4.3 \u2014 MAPIE Conformal Prediction",
+  "model": "Model B (class-weighted)",
+  "calibration_size": 0.2
+}
