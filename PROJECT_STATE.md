@@ -37,7 +37,7 @@
   - [x] 4.1 `src/evaluate_shap.py` — TreeSHAP with k-means background (1000 samples, <50ms)
   - [x] 4.2 Deletion/Insertion AUC curves (500 test attack samples, Model A vs Model B)
   - [ ] 4.3 Multi-seed SHAP stability (Jaccard similarity of Top-5 features)
-  - [ ] 4.4 `src/uncertainty.py` — MAPIE Conformal Prediction (α=0.05, 95% coverage)
+  - [x] 4.4 `src/uncertainty.py` — MAPIE Conformal Prediction (α=0.05, 95% coverage)
 
 - [ ] **Phase 5: Fast Triage REST API & Presentation**
   - [ ] 5.1 `api/main.py` — FastAPI `/predict` endpoint
