@@ -1,0 +1,345 @@
+{
+  "phase": "Phase 4, Step 4.3 \u2014 Multi-Seed SHAP Stability",
+  "seeds": [
+    42,
+    101,
+    202,
+    303,
+    404
+  ],
+  "top_k": 5,
+  "n_attack_samples": 200,
+  "shap_background_k": 1000,
+  "model_A_SMOTE": {
+    "top_k_features_per_seed": {
+      "42": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min",
+        "Tot Fwd Pkts"
+      ],
+      "101": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min",
+        "Init Fwd Win Byts"
+      ],
+      "202": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min",
+        "RST Flag Cnt"
+      ],
+      "303": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min",
+        "Init Fwd Win Byts"
+      ],
+      "404": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Pkt Len Max",
+        "Fwd Seg Size Min"
+      ]
+    },
+    "shap_rankings_per_seed": {
+      "42": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.893243
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.031709
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.522634
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.393415
+        },
+        {
+          "feature": "Tot Fwd Pkts",
+          "mean_abs_shap": 0.233619
+        }
+      ],
+      "101": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.31333
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.264602
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.61554
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.534931
+        },
+        {
+          "feature": "Init Fwd Win Byts",
+          "mean_abs_shap": 0.24497
+        }
+      ],
+      "202": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 3.046466
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 0.899461
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.633872
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.36749
+        },
+        {
+          "feature": "RST Flag Cnt",
+          "mean_abs_shap": 0.200063
+        }
+      ],
+      "303": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.493402
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.592784
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.502653
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.434916
+        },
+        {
+          "feature": "Init Fwd Win Byts",
+          "mean_abs_shap": 0.21942
+        }
+      ],
+      "404": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.834971
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.249628
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.520923
+        },
+        {
+          "feature": "Fwd Pkt Len Max",
+          "mean_abs_shap": 0.249654
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.245082
+        }
+      ]
+    },
+    "pairwise_jaccard": {
+      "42_vs_101": 0.6667,
+      "42_vs_202": 0.6667,
+      "42_vs_303": 0.6667,
+      "42_vs_404": 0.6667,
+      "101_vs_202": 0.6667,
+      "101_vs_303": 1.0,
+      "101_vs_404": 0.6667,
+      "202_vs_303": 0.6667,
+      "202_vs_404": 0.6667,
+      "303_vs_404": 0.6667
+    },
+    "mean_jaccard": 0.7
+  },
+  "model_B_weighted": {
+    "top_k_features_per_seed": {
+      "42": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min",
+        "RST Flag Cnt"
+      ],
+      "101": [
+        "Bwd Pkt Len Std",
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min"
+      ],
+      "202": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min",
+        "RST Flag Cnt"
+      ],
+      "303": [
+        "Bwd Pkts/s",
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min"
+      ],
+      "404": [
+        "Dst Port",
+        "Fwd Act Data Pkts",
+        "Fwd Header Len",
+        "Fwd Seg Size Min",
+        "RST Flag Cnt"
+      ]
+    },
+    "shap_rankings_per_seed": {
+      "42": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.546849
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.403659
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.681404
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.638436
+        },
+        {
+          "feature": "RST Flag Cnt",
+          "mean_abs_shap": 0.275509
+        }
+      ],
+      "101": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.629629
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.379017
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.651969
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.619366
+        },
+        {
+          "feature": "Bwd Pkt Len Std",
+          "mean_abs_shap": 0.275751
+        }
+      ],
+      "202": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.40322
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.258056
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.78315
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.600042
+        },
+        {
+          "feature": "RST Flag Cnt",
+          "mean_abs_shap": 0.273594
+        }
+      ],
+      "303": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.625566
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.419317
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.602064
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.547535
+        },
+        {
+          "feature": "Bwd Pkts/s",
+          "mean_abs_shap": 0.246152
+        }
+      ],
+      "404": [
+        {
+          "feature": "Fwd Seg Size Min",
+          "mean_abs_shap": 2.311609
+        },
+        {
+          "feature": "Fwd Act Data Pkts",
+          "mean_abs_shap": 1.612989
+        },
+        {
+          "feature": "Dst Port",
+          "mean_abs_shap": 0.888766
+        },
+        {
+          "feature": "Fwd Header Len",
+          "mean_abs_shap": 0.39877
+        },
+        {
+          "feature": "RST Flag Cnt",
+          "mean_abs_shap": 0.265739
+        }
+      ]
+    },
+    "pairwise_jaccard": {
+      "42_vs_101": 0.6667,
+      "42_vs_202": 1.0,
+      "42_vs_303": 0.6667,
+      "42_vs_404": 1.0,
+      "101_vs_202": 0.6667,
+      "101_vs_303": 0.6667,
+      "101_vs_404": 0.6667,
+      "202_vs_303": 0.6667,
+      "202_vs_404": 1.0,
+      "303_vs_404": 0.6667
+    },
+    "mean_jaccard": 0.7667
+  },
+  "interpretation": {
+    "result": "Model B has MORE stable SHAP explanations",
+    "note": "Jaccard similarity of 1.0 = identical Top-5 feature sets across seeds. Higher mean Jaccard = more reproducible/stable SHAP explanations."
+  }
+}

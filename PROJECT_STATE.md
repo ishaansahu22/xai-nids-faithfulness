@@ -8,10 +8,10 @@
 - **Dataset:** CSE-CIC-IDS2018 (Kaggle: `solarmainframe/ids-intrusion-csv`)
 
 ## 2. Current Status
-- **Current Phase:** Phase 4 (XAI Faithfulness & Uncertainty Quantification)
-- **Active Step:** Step 4.3 (Multi-seed SHAP Stability)
-- **Status:** IN PROGRESS
-- **Last Updated:** 2026-08-28 02:32 IST
+- **Current Phase:** ALL PHASES COMPLETE
+- **Active Step:** None — all checklist items done
+- **Status:** COMPLETE
+- **Last Updated:** 2026-08-28 04:22 IST
 
 ## 3. Execution Checklist & Log
 
@@ -33,10 +33,10 @@
   - [x] 3.3 Confusion matrices & metrics saved to `reports/`
   - [x] 3.4 `src/multi_seed_validation.py` — 5-Seed statistical validation: A F1=0.7747±0.0009, B F1=0.7430±0.0005, all p<0.05
 
-- [/] **Phase 4: XAI Faithfulness & Uncertainty Quantification** ⏳
+- [x] **Phase 4: XAI Faithfulness & Uncertainty Quantification** ✅
   - [x] 4.1 `src/evaluate_shap.py` — TreeSHAP with k-means background (1000 samples, <50ms)
   - [x] 4.2 Deletion/Insertion AUC curves (500 test attack samples, Model A vs Model B)
-  - [ ] 4.3 Multi-seed SHAP stability (Jaccard similarity of Top-5 features)
+  - [x] 4.3 `src/shap_stability.py` — Multi-seed SHAP stability: A Jaccard=0.7000, B Jaccard=0.7667 (B more stable)
   - [x] 4.4 `src/uncertainty.py` — MAPIE Conformal Prediction (α=0.05, 95% coverage)
 
 - [x] **Phase 5: Fast Triage REST API & Presentation**
