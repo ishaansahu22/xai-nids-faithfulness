@@ -9,9 +9,9 @@
 
 ## 2. Current Status
 - **Current Phase:** Phase 4 (XAI Faithfulness & Uncertainty Quantification)
-- **Active Step:** Step 4.1 (TreeSHAP + Deletion/Insertion Curves)
+- **Active Step:** Step 4.3 (Multi-seed SHAP Stability)
 - **Status:** IN PROGRESS
-- **Last Updated:** 2026-08-26 00:05 IST
+- **Last Updated:** 2026-08-28 02:32 IST
 
 ## 3. Execution Checklist & Log
 
@@ -31,7 +31,7 @@
   - [x] 3.1 Model A (SMOTE): Acc=0.9199, P=0.8178, R=0.7364, **F1=0.7750**
   - [x] 3.2 Model B (Weighted): Acc=0.8964, P=0.6944, R=0.7979, **F1=0.7426**
   - [x] 3.3 Confusion matrices & metrics saved to `reports/`
-  - [ ] 3.4 5-Seed statistical validation (deferred to after Phase 4)
+  - [x] 3.4 `src/multi_seed_validation.py` — 5-Seed statistical validation: A F1=0.7747±0.0009, B F1=0.7430±0.0005, all p<0.05
 
 - [/] **Phase 4: XAI Faithfulness & Uncertainty Quantification** ⏳
   - [x] 4.1 `src/evaluate_shap.py` — TreeSHAP with k-means background (1000 samples, <50ms)

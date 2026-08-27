@@ -1,0 +1,126 @@
+{
+  "phase": "Phase 3, Step 3.4 \u2014 5-Seed Statistical Validation",
+  "seeds": [
+    42,
+    101,
+    202,
+    303,
+    404
+  ],
+  "data_split_seed": 42,
+  "note": "Data split is FIXED (seed=42). Only model/SMOTE seeds are varied.",
+  "model_A_SMOTE": {
+    "accuracy": {
+      "mean": 0.9197,
+      "std": 0.0005,
+      "values": [
+        0.9199,
+        0.9192,
+        0.9204,
+        0.92,
+        0.9191
+      ]
+    },
+    "precision": {
+      "mean": 0.8169,
+      "std": 0.0031,
+      "values": [
+        0.8178,
+        0.8133,
+        0.8214,
+        0.8188,
+        0.8135
+      ]
+    },
+    "recall": {
+      "mean": 0.7365,
+      "std": 0.001,
+      "values": [
+        0.7364,
+        0.738,
+        0.7351,
+        0.7359,
+        0.7372
+      ]
+    },
+    "f1_score": {
+      "mean": 0.7747,
+      "std": 0.0009,
+      "values": [
+        0.775,
+        0.7738,
+        0.7759,
+        0.7751,
+        0.7735
+      ]
+    }
+  },
+  "model_B_weighted": {
+    "accuracy": {
+      "mean": 0.8966,
+      "std": 0.0003,
+      "values": [
+        0.8964,
+        0.8965,
+        0.8963,
+        0.8966,
+        0.8971
+      ]
+    },
+    "precision": {
+      "mean": 0.6949,
+      "std": 0.0011,
+      "values": [
+        0.6944,
+        0.6947,
+        0.6936,
+        0.695,
+        0.6969
+      ]
+    },
+    "recall": {
+      "mean": 0.7983,
+      "std": 0.0006,
+      "values": [
+        0.7979,
+        0.7982,
+        0.7994,
+        0.7981,
+        0.7977
+      ]
+    },
+    "f1_score": {
+      "mean": 0.743,
+      "std": 0.0005,
+      "values": [
+        0.7426,
+        0.7429,
+        0.7427,
+        0.743,
+        0.7439
+      ]
+    }
+  },
+  "paired_t_test": {
+    "accuracy": {
+      "t_statistic": 61.6795,
+      "p_value": 0.0,
+      "significant_at_005": true
+    },
+    "precision": {
+      "t_statistic": 61.1334,
+      "p_value": 0.0,
+      "significant_at_005": true
+    },
+    "recall": {
+      "t_statistic": -85.6805,
+      "p_value": 0.0,
+      "significant_at_005": true
+    },
+    "f1_score": {
+      "t_statistic": 50.3028,
+      "p_value": 1e-06,
+      "significant_at_005": true
+    }
+  }
+}
